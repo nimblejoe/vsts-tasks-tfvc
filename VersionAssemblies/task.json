@@ -1,0 +1,65 @@
+{
+  "id": "4585fbdd-dbe3-4948-9f3a-5377885d9c6d",
+  "name": "VersionAssemblies",
+  "friendlyName": "Version AssemblyInfo files for MSBuild",
+  "description": "Update the AssemblyInfo files for deployment with option to check-in the updated files.",
+  "helpMarkDown": "[More Information](wiki link here)",
+  "category": "Build",
+  "visibility": [
+    "Build"
+  ],
+  "author": "SDC Team",
+  "version": {
+    "Major": 1,
+    "Minor": 0,
+    "Patch": 0
+  },
+  "minimumAgentVersion": "1.95.0",
+  "demands": [
+    "msbuild",
+    "java"
+  ],
+  "groups": [
+    {
+      "name": "version",
+      "displayName": "Version Info",
+      "isExpanded": true
+    }
+  ],
+  "inputs": [
+    {
+      "name": "major",
+      "type": "string",
+      "label": "Major Version",
+      "required": true,
+      "helpMarkDown": "Provide integer value for the major version",
+      "groupName": "version"
+    },
+    {
+      "name": "minor",
+      "type": "string",
+      "label": "Minor Version",
+      "required": true,
+      "helpMarkDown": "Provide integer value for the minor version",
+      "groupName": "version"
+    },
+    
+    {
+      "name": "checkin",
+      "type": "boolean",
+      "defaultValue": true,
+      "label": "Checkin AssemblyInfo",
+      "required": false,
+      "helpMarkDown": "Uncheck if you do not want to check in your AssemblyInfo files",
+      "groupName": "version"
+    }
+  ],
+  "instanceNameFormat": "Apply version number to AssemblyInfo files.",
+  "execution": {
+    "PowerShell": {
+      "target": "$(currentDirectory)\\ApplyVersionToAssemblies.ps1",
+      "argumentFormat": "",
+      "workingDirectory": "$(currentDirectory)"
+    }
+  }
+}

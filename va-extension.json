@@ -1,0 +1,48 @@
+{
+  "manifestVersion": 1,
+  "id": "version-assemblies",
+  "name": "VersionAssemblies",
+  "version": "1.0.0",
+  "publisher": "nimblejoe",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "Update the AssemblyInfo files for deployment with option to check-in the updated files.",
+  "categories": [
+    "Build and release"
+  ],
+  "tags": [
+    "version",
+    "build",
+    "versioning",
+    "assembly",
+    "assemblies"
+  ],
+  "icons": {
+    "default": "VersionAssembliesIcon.png"
+  },
+  "content": {
+    "details": {
+      "path": "readme.md"
+    }
+  },
+  "files": [
+    {
+      "path": "VersionAssemblies"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "version-assemblies-task",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "VersionAssemblies"
+      }
+    }
+  ]
+}
