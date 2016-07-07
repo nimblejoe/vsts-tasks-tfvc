@@ -13,7 +13,7 @@ Version AssemblyInfo files for MSBuild
 ### Requirements for this task
 - **Powershell :** This plugin requires that the Powershell TFS Cmdlets are installed in the build server.  This can be installed as part of the TFS Powertools installation.
 
-	>***Note:** The Powershell Cmdlets are not installed by default with Powertools.  You may need to run the installer a second time and specify that you want the Cmdlets added.*
+	>*Note: The Powershell Cmdlets are not installed by default with Powertools.  You may need to run the installer a second time and specify that you want the Cmdlets added.*
 
 - **Build Number Format :**  The build number format found on the General tab of the Build Definition must follow this pattern: <br />
 
